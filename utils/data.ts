@@ -7,6 +7,12 @@ type Cities = {
     name: string,
 }
 
+type Layers = {
+    id: number,
+    layer: string,
+    title: string
+}
+
 type Stories = {
     id: number,
     title: string,
@@ -55,5 +61,33 @@ export const stories: Stories[] = [
         title: 'The Science Behind Weather Forecasting',
         description: 'Discover how experts predict the weather and why forecasts change.',
         image: forecast,
+    },
+]
+
+export const layers: Layers[] = [
+    {
+        id: 1,
+        title: 'clouds',
+        layer: 'clouds_new'
+    },
+    {
+        id: 2,
+        title: 'precipitation',
+        layer: 'precipitation_new'
+    },
+    {
+        id: 3,
+        title: 'pressure',
+        layer: 'pressure_new'
+    },
+    {
+        id: 4,
+        title: 'wind',
+        layer: 'wind_new'
+    },
+    {
+        id: 5,
+        title: 'temp',
+        layer: 'temp_new'
     },
 ]

@@ -6,7 +6,7 @@ import Image from 'next/image'
 function FeaturedStories() {
   return (
       <section className='py-10 lg:py-18 featured-bg'>
-          <SectionTitle text='featured stories' />
+          <SectionTitle text='featured weather stories' />
           <div className="container main-container grid lg:grid-cols-2 xl:grid-cols-3 gap-y-6 gap-x-8">
               {stories.map((item) => {
                   const { image, id, title, description } = item
