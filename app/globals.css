@@ -8,22 +8,35 @@
 :root {
   --background-color: #F5F5F5;
   --card-background-color: #FFFFFF;
+  --card-second: #F5F5F5;
+  --card-bg: #FFFFFF;
   --text-primary: #1E1E2C;
   --text-secondary: #33334C;
   --accent-color: #4E8DFF;
   --toggle-color: #FFAA00;
   --border-color: #D1D1D1;
+
+  --padding-top-mobile: 2.5rem;   /* pt-10 */
+  --padding-bottom-mobile: 4rem;  /* pb-16 */
+  --padding-top-lg: 4rem;         /* lg:pt-16 */
+  --padding-bottom-lg: 6rem;      /* lg:pb-24 */
 }
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
   --background-color: #1E1E2C; /* Main background for full-page layout */
   --card-background-color: #2A2A40; /* Cards, main component backgrounds */
+  --card-second: #2A2A40; /* Cards, main component backgrounds */
+  --card-bg: #33334C; /* Cards, second component backgrounds */
   --text-primary: #EDEDED; /* Primary text for dark mode */
   --text-secondary: #A1A1B5; /* Less prominent text */
   --accent-color: #4E8DFF; /* Bright blue for temperature and actions */
   --toggle-color: #FFAA00; /* For toggling units or call-to-action buttons */
   --border-color: #4A4A5E; /* Subtle border around containers */
+}
+
+.featured-bg {
+  background-color: var(--card-bg);
 }
 
 .input {
@@ -71,9 +84,35 @@ body {
   background-color: var(--card-background-color);
 }
 
+.secondary-card {
+  background-color: var(--card-second);
+}
+
+
 .button {
   background-color: var(--accent-color);
   color: white;
+  padding: 0 2rem; /* px-8 = 8 * 0.25rem = 2rem */
+  padding-top: 4px;  /* py-[4px], top padding 4px */
+  padding-bottom: 4px;
+
+  border-radius: 6px;  /* rounded-[6px] */
+  
+  font-size: 16px;  /* text-lg = 18px or 1.125rem */
+  font-family: 'Poppins', sans-serif;  /* poppins-medium */
+  font-weight: 500;  /* Medium weight for poppins */
+  
+  letter-spacing: 0.05em;  /* tracking-wide */
+  text-transform: capitalize;  /* capitalize */
+}
+
+@media (min-width: 1024px) {
+  .button {
+  font-size: 1.125rem;  /* text-lg = 18px or 1.125rem */
+    padding: 0 2.5rem;  /* lg:px-10, 10 * 0.25rem = 2.5rem */
+    padding-top: 6px;  /* lg:py-[6px], vertical padding 6px */
+    padding-bottom: 6px;
+  }
 }
 
 .toggle {
@@ -104,5 +143,17 @@ body {
   .main-container {
     padding-left: 0.25rem;  
     padding-right: 0.25rem; 
+  }
+}
+
+.section {
+  padding-top: var(--padding-top-mobile);
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+@media (min-width: 1024px) { /* lg screen size breakpoint */
+  .section {
+    padding-top: var(--padding-top-lg);
+    padding-bottom: var(--padding-bottom-lg);
   }
 }

@@ -4,7 +4,7 @@ import { CarouselSize } from '../global/CarouselSize'
 
 function PopularCities() {
   return (
-      <section className='py-10 lg:py-18'>
+      <section className='section'>
           <SectionTitle text='popular cities' />
           <div className='container main-container grid place-items-center'>
               <CarouselSize />
