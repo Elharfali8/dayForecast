@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import {Hero} from "@/components/home";
+import PopularCities from "@/components/home/PopularCities";
 
 export default function Home() {
   return (
-    <div>
-      holaa
-    </div>
+    <main>
+      <Hero /> 
+      <PopularCities />
+    </main>
   );
 }

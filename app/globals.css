@@ -26,6 +26,10 @@
   --border-color: #4A4A5E; /* Subtle border around containers */
 }
 
+.input {
+  background-color: var(--text-primary);
+}
+
 .text-primary {
   color: var(--text-primary);
 }
@@ -65,7 +69,6 @@ body {
 
 .card {
   background-color: var(--card-background-color);
-  border: 1px solid var(--border-color);
 }
 
 .button {
