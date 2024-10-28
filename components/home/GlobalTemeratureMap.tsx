@@ -18,7 +18,7 @@ const GlobalTemperatureMap: React.FC = ({currentLayer} : {currentLayer:string}) 
   }, []);
 
   return (
-    <MapContainer center={[20, 0]} zoom={2} style={{ height: "500px", width: "100%" }}>
+    <MapContainer center={[20, 0]} zoom={2} style={{ height: "500px", width: "100%", borderRadius: "10px" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

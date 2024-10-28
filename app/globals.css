@@ -35,6 +35,19 @@
   --border-color: #4A4A5E; /* Subtle border around containers */
 }
 
+footer {
+  background: var(--card-background-color);
+}
+
+footer a {
+  color: var(--text-primary);
+  transition: all ease-in-out 150ms;
+}
+
+footer a:hover {
+  color: var(--text-secondary);
+}
+
 .featured-bg {
   background-color: var(--card-bg);
 }

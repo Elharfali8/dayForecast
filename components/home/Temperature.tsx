@@ -28,7 +28,8 @@ function Temperature() {
             })}
         </div>
       </div>
-        <GlobalTemperatureMap currentLayer={currentLayer} />
+      {/* <GlobalTemperatureMap currentLayer={currentLayer} /> */}
+      
       </div>
   )
 }
