@@ -11,7 +11,7 @@
   --card-second: #F5F5F5;
   --card-bg: #FFFFFF;
   --text-primary: #1E1E2C;
-  --text-secondary: #33334C;
+  --text-secondary: #3333334C334C;
   --accent-color: #4E8DFF;
   --toggle-color: #FFAA00;
   --border-color: #D1D1D1;
@@ -26,13 +26,17 @@
 [data-theme="dark"] {
   --background-color: #1E1E2C; /* Main background for full-page layout */
   --card-background-color: #2A2A40; /* Cards, main component backgrounds */
-  --card-second: #2A2A40; /* Cards, main component backgrounds */
+  --card-second: #1E1E2C; /* Cards, main component backgrounds */
   --card-bg: #33334C; /* Cards, second component backgrounds */
   --text-primary: #EDEDED; /* Primary text for dark mode */
   --text-secondary: #A1A1B5; /* Less prominent text */
   --accent-color: #4E8DFF; /* Bright blue for temperature and actions */
   --toggle-color: #FFAA00; /* For toggling units or call-to-action buttons */
   --border-color: #4A4A5E; /* Subtle border around containers */
+}
+
+.secondary-card {
+  background-color: var(--card-second);
 }
 
 footer {
@@ -46,6 +50,10 @@ footer a {
 
 footer a:hover {
   color: var(--text-secondary);
+}
+
+.main-border {
+  border-bottom: 2px solid var(--border-color);
 }
 
 .featured-bg {
@@ -97,9 +105,7 @@ body {
   background-color: var(--card-background-color);
 }
 
-.secondary-card {
-  background-color: var(--card-second);
-}
+
 
 
 .button {

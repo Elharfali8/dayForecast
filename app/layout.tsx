@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import {Navbar} from "@/components/navbar";
 import { Footer } from "@/components/global";
+import { Providers } from "./providers";
 
 
 
@@ -20,9 +21,11 @@ export default function RootLayout({
       <body
         className={` antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
