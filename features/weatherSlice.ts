@@ -4,12 +4,14 @@ import axios from 'axios'
 type State = {
     isLoading: boolean,
     data: WeatherData | null,
+    city: string,
     error: any,
 }
 
 const initialState: State = {
     isLoading: false,
     data: null,
+    city: '',
     error: null
 }
 
@@ -47,7 +49,12 @@ export const fetchWeatherData = createAsyncThunk < WeatherData, { city: string }
 export const weatherSlice = createSlice({
     name: 'weather',
     initialState,
-    reducers: {},
+    reducers: {
+        addCity: (state, action) => {
+            const city = action.payload
+            state.city = city
+        }
+    },
     extraReducers: (builder) => {
         builder
         .addCase(fetchWeatherData.pending, (state) => {
@@ -65,5 +72,7 @@ export const weatherSlice = createSlice({
         });
     }
 })
+
+export const {addCity} = weatherSlice.actions
 
 export default weatherSlice.reducer
