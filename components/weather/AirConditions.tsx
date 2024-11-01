@@ -40,7 +40,7 @@ function AirConditions({ data }: AirForecastProps) {
               <div className=''>
                   <div className='flex items-center gap-x-3 mb-2 lg:mb-3'>
                       <span><FaTemperatureHigh size={27} className='text-secondary' /></span>
-                      <h3 className=' capitalize text-secondary text-lg md:text-xl tracking-wide poppins-medium'>real feel</h3>
+                      <h3 className=' capitalize text-secondary lg:text-lg tracking-wide poppins-medium'>real feel</h3>
                   </div>
                   <p className='poppins-semibold text-primary text-2xl md:text-3xl lg:text-4xl pl-4 lg:pl-10'>{feel}&deg;</p>
               </div>
@@ -48,7 +48,7 @@ function AirConditions({ data }: AirForecastProps) {
               <div className=''>
                   <div className='flex items-center gap-x-3 mb-2 lg:mb-3'>
                       <span><FaWind size={27} className='text-secondary' /></span>
-                      <h3 className=' capitalize text-secondary text-lg md:text-xl tracking-wide poppins-medium'>wind</h3>
+                      <h3 className=' capitalize text-secondary lg:text-lg tracking-wide poppins-medium'>wind</h3>
                   </div>
                   <p className='poppins-semibold text-primary text-2xl md:text-3xl lg:text-4xl pl-4 lg:pl-10'>{wind} <span className='ml-1'>km/h</span></p>
               </div>
@@ -56,7 +56,7 @@ function AirConditions({ data }: AirForecastProps) {
               <div className=''>
                   <div className='flex items-center gap-x-3 mb-2 lg:mb-3'>
                       <span><WiHumidity size={27} className='text-secondary' /></span>
-                      <h3 className=' capitalize text-secondary text-lg md:text-xl tracking-wide poppins-medium'>humidity</h3>
+                      <h3 className=' capitalize text-secondary lg:text-lg tracking-wide poppins-medium'>humidity</h3>
                   </div>
                   <p className='poppins-semibold text-primary text-2xl md:text-3xl lg:text-4xl pl-4 lg:pl-10'>{humidity} <span className='ml-1'>%</span></p>
               </div>

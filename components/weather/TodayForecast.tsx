@@ -44,9 +44,11 @@ function TodayForecast({ data }: TodayForecastProps) {
                     hour12: false, 
                 });
                   return (
-                      <div key={index} className="grid place-items-center card rounded-[9px]">
+                      <div key={index} className="grid place-items-center card rounded-[9px] shadow-lg dark:shadow-black  p-2 pt-3">
                           <span className="mb-1 lg:mb-2">
-                              <Image src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="weather icon" width={60} height={60} />
+                          <div className=' bg-blue-400 rounded-full p-2 md:p-1 shadow-lg shadow-gray-500 dark:shadow-black'>
+                                  <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="weather icon" className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12" />
+                                  </div>
                           </span>
                           <div className="grid place-items-center mb-2">
                               <h3>{timeString}</h3>

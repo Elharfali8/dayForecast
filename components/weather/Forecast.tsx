@@ -16,7 +16,7 @@ function Forecast({ data }: ForecastProps) {
     const cityName = data?.name;
 
   return (
-      <div className='flex items-center justify-between lg:px-4 py-6 main-border'>
+      <div className='flex items-center justify-between lg:px-4 py-6 main-border '>
           <div className='grid gap-y-6 lg:gap-y-8'>
               <div>
               <h3 className='text-2xl md:text-4xl lg:text-5xl mb-1 capitalize tracking-wide poppins-semibold'>{cityName}</h3>
@@ -25,9 +25,11 @@ function Forecast({ data }: ForecastProps) {
               <h4 className='text-xl md:text-2xl lg:text-3xl poppins-medium  capitalize tracking-wide '>{temperature}&deg;</h4>
           </div>
           <div className='grid place-items-center'>
-              <Image src={`https://openweathermap.org/img/wn/${icon}@2x.png
-`} width={110} height={110} alt='weather icon' className='' />
-              <p>{description}</p>
+          <div className=' bg-blue-400 rounded-full p-2 md:p-1 shadow-lg shadow-gray-500 dark:shadow-black'>
+              <img src={`https://openweathermap.org/img/wn/${icon}@2x.png
+`}  alt='weather icon' className='w-14 h-14 sm:h-16 sm:w-16 md:h-[70px] md:w-[70px] lg:w-[80px] lg:h-[80px]'  />
+                  </div>
+              <p className='mt-2 text-secondary sm:text-lg xl:text-xl'>{description}</p>
           </div>
     </div>
   )
