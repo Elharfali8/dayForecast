@@ -26,8 +26,15 @@ function Forecast({ data }: ForecastProps) {
           </div>
           <div className='grid place-items-center'>
           <div className=' bg-blue-400 rounded-full p-2 md:p-1 shadow-lg shadow-gray-500 dark:shadow-black'>
-              <img src={`https://openweathermap.org/img/wn/${icon}@2x.png
-`}  alt='weather icon' className='w-14 h-14 sm:h-16 sm:w-16 md:h-[70px] md:w-[70px] lg:w-[80px] lg:h-[80px]'  />
+          <Image
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt="weather icon"
+            width={56} 
+            height={56}
+            className="w-14 h-14 sm:w-16 sm:h-16 md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
+            priority 
+        />
+                  
                   </div>
               <p className='mt-2 text-secondary sm:text-lg xl:text-xl'>{description}</p>
           </div>

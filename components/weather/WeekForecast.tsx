@@ -6,6 +6,7 @@ import { fetchFiveDaysForecast } from '@/features/fiveDays/fiveDaysSlice';
 import { AppDispatch } from '@/store';
 import { format } from 'date-fns';
 import { WeatherTitle } from '../global';
+import Image from 'next/image';
 
 interface FiveDaysProps {
     data: {
@@ -53,10 +54,13 @@ function WeekForecast({ data }: FiveDaysProps) {
                                 <div key={index} className='text-center flex flex-col items-center gap-1'>
                                     <p className='text-secondary text-sm'>{timeData.time}</p>
                                     <div className=' bg-blue-400 rounded-full p-2 md:p-1 shadow-lg shadow-gray-500 dark:shadow-black mb-1'>
-                                    <img
-                                        src={`http://openweathermap.org/img/wn/${timeData.icon}.png`}
-                                        alt="weather icon"
-                                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12" // Responsive icon size
+                                    
+                                        <Image
+                                            src={`http://openweathermap.org/img/wn/${timeData.icon}.png`}
+                                            alt="weather icon"
+                                            height={48}
+                                            className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12"
+                                            priority 
                                         />
                                         </div>
                                     <p className='poppins-medium text-sm sm:text-base'>{Math.round(timeData.temp)}°C</p>
